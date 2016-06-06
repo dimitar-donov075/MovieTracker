@@ -1,17 +1,17 @@
 ﻿@model MovieTracker.Models.Series
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Детайли";
 }
 
-<h2>Details</h2>
+<h2>Детайли</h2>
 
 <div>
-    <h4>Series</h4>
+    <h4>Сериали</h4>
 	<hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Title)
+            <strong>Заглавие</strong>
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Genre)
+            <strong>Жанр</strong>
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AirDate)
+            <strong>Дата на пускане</strong>
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Season)
+            <strong>Сезон</strong>
         </dt>
 
         <dd>
@@ -43,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Episode)
+            <strong>Епизод</strong>
         </dt>
 
         <dd>
@@ -53,6 +53,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Редактирай", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Назад", "Index")
 </p>
