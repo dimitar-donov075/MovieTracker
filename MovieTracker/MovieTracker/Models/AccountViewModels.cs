@@ -31,7 +31,7 @@ namespace MovieTracker.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Никнайм")]
+        [Display(Name = "Никнейм")]
         public string UserName { get; set; }
 
         [Required]

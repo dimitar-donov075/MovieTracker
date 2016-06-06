@@ -53,7 +53,7 @@ namespace MovieTracker.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid username or password.");
+                    ModelState.AddModelError("", "Невалидно потребителско име или парола.");
                 }
             }
 
@@ -119,10 +119,10 @@ namespace MovieTracker.Controllers
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
+                message == ManageMessageId.ChangePasswordSuccess ? "Паролата ви беше успешно сменена."
+                : message == ManageMessageId.SetPasswordSuccess ? "Паролата беше създадена."
+                : message == ManageMessageId.RemoveLoginSuccess ? "Външния акаунт беше премахнат."
+                : message == ManageMessageId.Error ? "Възникна грешка."
                 : "";
             ViewBag.HasLocalPassword = HasPassword();
             ViewBag.ReturnUrl = Url.Action("Manage");
